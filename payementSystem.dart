@@ -1,4 +1,3 @@
-import 'dart:ffi';
 
 enum PaymentSatus {
  Pending(Title:'Pending',Value:1 ), 
@@ -34,7 +33,3 @@ abstract class Payementsystem {
 
   void info();
 }
-
-
-
-class cashPayment
