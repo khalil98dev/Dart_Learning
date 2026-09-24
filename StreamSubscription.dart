@@ -36,15 +36,13 @@ void main()async{
 
   late StreamSubscription sup ; 
 
-   sup = stream.listen((data) async{
+   sup = stream.listen((data){
     print(data);
     
     if(data==50){
         print('Subscription cancelled');
-        await sup.cancel();  
-    }},onDone:(){
-      print("Task Done");
-  },onError: (e){
-    print("Task Error ${e}");
+        sup.cancel();  
+    }
+
   });
 }
